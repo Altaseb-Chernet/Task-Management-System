@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="animations.css"> -->
+</head>
+<body>
+  <div class="blur-overlay"></div>
+  <div class="container">
+    <h1 class="title">Task Manager</h1>
+    
+    <div class="task-form">
+      <input type="text" id="task-input" placeholder="What needs to be done?" class="task-input">
+      <button id="add-task-btn" class="add-btn pulse"><i class="fas fa-plus"></i> Add</button>
+    </div>
+    <p id="error-msg" class="error"></p>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+    
+    <ul id="task-list" class="task-list"></ul>
+    
+    <div class="task-stats">
+      <span id="remaining-count">0</span> tasks remaining
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
